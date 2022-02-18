@@ -24,7 +24,8 @@
       "*" : ["types/*"]
     },
     "rootDir": "./src",
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "skipLibCheck": true
   },
   "include": ["src/**/*"],
   "exclude": ["**/__tests__"]
