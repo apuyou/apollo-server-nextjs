@@ -1,0 +1,41 @@
+{
+  "name": "apollo-server-nextjs",
+  "version": "3.0.0",
+  "description": "Apollo Server for Next.js API routes",
+  "keywords": [
+    "GraphQL",
+    "Apollo",
+    "Server",
+    "Lambda",
+    "Javascript",
+    "Next.js"
+  ],
+  "author": "Arthur Puyou <arthur@puyou.fr>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apuyou/apollo-server-nextjs"
+  },
+  "homepage": "https://github.com/apuyou/apollo-server-nextjs#readme",
+  "bugs": {
+    "url": "https://github.com/apuyou/apollo-server-nextjs/issues"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": ">=12.0"
+  },
+  "dependencies": {
+    "@types/aws-lambda": "^8.10.76",
+    "apollo-server-core": "^3.6.3",
+    "apollo-server-express": "^3.6.3",
+    "express": "^4.17.1",
+    "next": "^12.1.0"
+  },
+  "devDependencies": {
+    "apollo-server-integration-testsuite": "^2.30.0"
+  },
+  "peerDependencies": {
+    "graphql": "^15.3.0 || ^16.0.0"
+  }
+}
