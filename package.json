@@ -10,6 +10,9 @@
     "Javascript",
     "Next.js"
   ],
+  "scripts": {
+    "compile": "tsc --build"
+  },
   "author": "Arthur Puyou <arthur@puyou.fr>",
   "license": "MIT",
   "repository": {
@@ -29,13 +32,14 @@
     "@types/aws-lambda": "^8.10.76",
     "apollo-server-core": "^3.6.3",
     "apollo-server-express": "^3.6.3",
-    "express": "^4.17.1",
-    "next": "^12.1.0"
+    "express": "^4.17.1"
   },
   "devDependencies": {
-    "apollo-server-integration-testsuite": "^2.30.0"
+    "apollo-server-integration-testsuite": "^2.30.0",
+    "typescript": "^4.5.5"
   },
   "peerDependencies": {
-    "graphql": "^15.3.0 || ^16.0.0"
+    "graphql": "^15.3.0 || ^16.0.0",
+    "next": "^12.0.0"
   }
 }
