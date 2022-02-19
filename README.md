@@ -3,15 +3,19 @@
 [![Join the community forum](https://img.shields.io/badge/join%20the%20community-forum-blueviolet)](https://community.apollographql.com)
 [![Read CHANGELOG](https://img.shields.io/badge/read-changelog-blue)](https://github.com/apollographql/apollo-server/blob/HEAD/CHANGELOG.md) -->
 
-This is a Next.js 12 integration of GraphQL Server. Apollo Server is a community-maintained open-source GraphQL server that works with many Node.js HTTP server frameworks. [Read the docs](https://www.apollographql.com/docs/apollo-server/v2). [Read the CHANGELOG](https://github.com/apollographql/apollo-server/blob/main/CHANGELOG.md).
+This is a Next.js 12 integration of GraphQL Server. **It is early work and has not been extensively tested in production.**
 
-```shell
-npm install apollo-server-nextjs graphql
-```
+It is based on [samples provided by @glasser](https://github.com/vercel/next.js/pull/30082) and the official [apollo-server-lambda](http://github.com/apollographql/apollo-server/tree/main/packages/apollo-server-lambda) integration.
+
+Apollo Server is a community-maintained open-source GraphQL server that works with many Node.js HTTP server frameworks. [Read the docs](https://www.apollographql.com/docs/apollo-server/v2). [Read the CHANGELOG](https://github.com/apollographql/apollo-server/blob/main/CHANGELOG.md).
 
 ## Getting Started
 
 This section assumes that you already have a running Next.js project.
+
+```shell
+npm install apollo-server-nextjs graphql
+```
 
 Create a file named `pages/api/graphql.js`, place the following code:
 
