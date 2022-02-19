@@ -50,7 +50,7 @@ const server = new ApolloServer({
   plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
 });
 
-exports.handler = server.createHandler();
+export default server.createHandler();
 ```
 
 Then open http://localhost:3000/api/graphql
