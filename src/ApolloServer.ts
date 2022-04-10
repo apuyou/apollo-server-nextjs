@@ -1,9 +1,9 @@
 import {
   ApolloServer as ApolloServerExpress,
   GetMiddlewareOptions,
-} from 'apollo-server-express';
-import type express from 'express';
-import type { NextApiHandler, NextApiRequest, NextApiResponse } from 'next';
+} from "apollo-server-express";
+import type express from "express";
+import type { NextApiHandler, NextApiRequest, NextApiResponse } from "next";
 
 export interface CreateHandlerOptions {
   expressGetMiddlewareOptions?: GetMiddlewareOptions;
@@ -45,12 +45,18 @@ export class ApolloServer extends ApolloServerExpress<NextContext> {
           // /graphql, since serverless handlers tend to just do one thing and
           // paths are generally configured as part of deploying the app.
           {
-            path: '/',
+            path: "/",
             ...options?.expressGetMiddlewareOptions,
             bodyParserConfig: false,
           }
         );
       }
+
+      // The middleware will look for req.body, even for GET requests
+      if (!req.body) {
+        req.body = {};
+      }
+
       return await runMiddleware(req, res, middleware);
     };
   }
