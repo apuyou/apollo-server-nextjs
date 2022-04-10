@@ -46,8 +46,8 @@ export class ApolloServer extends ApolloServerExpress<NextContext> {
           // paths are generally configured as part of deploying the app.
           {
             path: "/",
-            ...options?.expressGetMiddlewareOptions,
             bodyParserConfig: false,
+            ...options?.expressGetMiddlewareOptions,
           }
         );
       }
