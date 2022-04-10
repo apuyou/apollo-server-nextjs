@@ -51,13 +51,6 @@ const server = new ApolloServer({
 });
 
 export default server.createHandler();
-
-// Disable Next.js body parsing so that Apollo Server can access it entirely
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
 ```
 
 Then open http://localhost:3000/api/graphql

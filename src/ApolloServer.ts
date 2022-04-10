@@ -47,6 +47,7 @@ export class ApolloServer extends ApolloServerExpress<NextContext> {
           {
             path: '/',
             ...options?.expressGetMiddlewareOptions,
+            bodyParserConfig: false,
           }
         );
       }
