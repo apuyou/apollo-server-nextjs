@@ -84,11 +84,8 @@ export function nextHandler<TContext extends BaseContext>(
 
       res.status(httpGraphQLResponse.status || 200);
 
-      for (const key in httpGraphQLResponse.headers) {
-        const value = httpGraphQLResponse.headers.get(key);
-        if (value) {
-          res.setHeader(key, value);
-        }
+      for (const [key, value] of httpGraphQLResponse.headers) {
+        res.setHeader(key, value);
       }
 
       res.send(httpGraphQLResponse.completeBody);
