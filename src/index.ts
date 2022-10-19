@@ -72,25 +72,24 @@ export function nextHandler<TContext extends BaseContext>(
       body: req.body,
     };
 
-    try {
-      const httpGraphQLResponse = await server.executeHTTPGraphQLRequest({
-        httpGraphQLRequest,
-        context: () => contextFunction({ req, res }),
-      });
+    const httpGraphQLResponse = await server.executeHTTPGraphQLRequest({
+      httpGraphQLRequest,
+      context: () => contextFunction({ req, res }),
+    });
 
-      if (httpGraphQLResponse.completeBody === null) {
-        throw Error("Incremental delivery not implemented");
-      }
-
-      res.status(httpGraphQLResponse.status || 200);
-
-      for (const [key, value] of httpGraphQLResponse.headers) {
-        res.setHeader(key, value);
-      }
-
-      res.send(httpGraphQLResponse.completeBody);
-    } catch (error) {
-      throw error;
+    for (const [key, value] of httpGraphQLResponse.headers) {
+      res.setHeader(key, value);
     }
+    res.status(httpGraphQLResponse.status || 200);
+
+    if (httpGraphQLResponse.body.kind === "complete") {
+      res.send(httpGraphQLResponse.body.string);
+      return;
+    }
+
+    for await (const chunk of httpGraphQLResponse.body.asyncIterator) {
+      res.write(chunk);
+    }
+    res.end();
   };
 }
