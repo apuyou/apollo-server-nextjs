@@ -1,6 +1,6 @@
 {
   "name": "apollo-server-nextjs",
-  "version": "4.0.0-alpha2",
+  "version": "4.0.0",
   "description": "Apollo Server integration for Next.js API routes",
   "keywords": [
     "GraphQL",
