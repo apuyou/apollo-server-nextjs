@@ -1,7 +1,7 @@
 {
   "name": "apollo-server-nextjs",
-  "version": "3.10.3",
-  "description": "Apollo Server for Next.js API routes",
+  "version": "4.0.0-alpha2",
+  "description": "Apollo Server integration for Next.js API routes",
   "keywords": [
     "GraphQL",
     "Apollo",
@@ -24,21 +24,14 @@
     "url": "https://github.com/apuyou/apollo-server-nextjs/issues"
   },
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "engines": {
     "node": ">=12.0"
   },
-  "dependencies": {
-    "apollo-server-core": "^3.10.3",
-    "apollo-server-express": "^3.10.3",
-    "express": "^4.17.1"
-  },
   "devDependencies": {
-    "apollo-server-integration-testsuite": "^2.30.0",
-    "typescript": "^4.5.5"
+    "typescript": "^4.7.4"
   },
   "peerDependencies": {
-    "graphql": "^15.3.0 || ^16.0.0",
-    "next": "^12.0.0"
+    "@apollo/server": "^4.0.0-alpha.7",
+    "next": "^12.2.5"
   }
 }
