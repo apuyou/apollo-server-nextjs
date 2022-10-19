@@ -1,6 +1,8 @@
-This is an unofficial Next.js 12 integration for Apollo Server V4. **It is early work and has not been extensively tested in production.**
+This is an unofficial Next.js 12 integration for Apollo Server 4. **It is early work and has not been extensively tested in production.**
 
-Apollo Server is a community-maintained open-source GraphQL server that works with many Node.js HTTP server frameworks. [Read the docs](https://www.apollographql.com/docs/apollo-server/v2). [Read the CHANGELOG](https://github.com/apollographql/apollo-server/blob/main/CHANGELOG.md).
+If you are using **Apollo Server 3**, please see [notes below](#apollo-server-3).
+
+Apollo Server is a community-maintained open-source GraphQL server that works with many Node.js HTTP server frameworks. [Read the docs](https://www.apollographql.com/docs/apollo-server).
 
 ## Getting Started
 
@@ -39,3 +41,15 @@ export default nextHandler(server);
 ```
 
 Then open http://localhost:3000/api/graphql
+
+## Apollo Server 3
+
+This package was available for Apollo Server 3.
+
+If you need support for **Apollo Server 3**, please use `apollo-server-nextjs@legacy` instead of `apollo-server-nextjs` when installing dependencies:
+
+```shell
+npm install apollo-server-nextjs@legacy graphql
+```
+
+Then, refer to [past documentation](https://github.com/apuyou/apollo-server-nextjs/blob/562852ae476a5db19e96d81b2f8f242ea77cc10e/README.md).
