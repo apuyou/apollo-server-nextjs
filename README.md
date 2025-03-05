@@ -1,3 +1,15 @@
+## This package is not maintained anymore
+
+Please have a look at the integration available on the Apollo Server integrations community GitHub organization: https://github.com/apollo-server-integrations/apollo-server-integration-next
+
+It supports additional features such as:
+- Next.js app router
+- Typescript
+
+Existing users should be able to migrate by replacing the import in their Apollo handler.
+
+---
+
 This is an unofficial Next.js 12 integration for Apollo Server 4. **It is early work and has not been extensively tested in production.**
 
 If you are using **Apollo Server 3**, please see [notes below](#apollo-server-3).
